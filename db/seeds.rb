@@ -18,9 +18,8 @@ puts 'Creating sneakers...'
 20.times do
   sneaker = Sneaker.new(brand: %w[Nike Adidas NewBalance Reebok Puma].sample,
                           price: (50..500).to_a.sample,
-                          size:  (5..14).to_a.sample,
+                          size: (5..14).to_a.sample,
                           model: %w[Jordans Yeezy NB-500 Classic Cell-king].sample)
-
   sneaker.user = User.all.sample
   sneaker.save!
 end
