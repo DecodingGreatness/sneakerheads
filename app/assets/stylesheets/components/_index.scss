@@ -3,3 +3,54 @@
 @import "avatar";
 @import "form_legend_clear";
 @import "navbar";
+@import "button";
+
+// Import font family
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+// font-family: 'Kdam Thmor Pro', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;700&display=swap');
+// font-family: 'Roboto Mono', monospace;
+
+// Utilites
+
+body, html {
+  height: 100%;
+}
+
+.bg {
+  /* The image used */
+  background-image:
+  linear-gradient(45deg, rgba(
+    145, 146, 122, 0.62), rgba(244, 238, 240, 0.58)), url(
+'https://source.unsplash.com/updW-QUccFE');
+
+  // background-image: url("https://source.unsplash.com/updW-QUccFE");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  color: white;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 72px;
+}
+
+h2 {
+  color: white;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 48px;
+}
+
+// Others
+
+.arrivals {
+  position: relative;
+  left: 150px;
+  top: 50px;
+}
