@@ -4,6 +4,7 @@
 @import "form_legend_clear";
 @import "navbar";
 @import "button";
+@import "cards";
 
 // Import font family
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
@@ -20,8 +21,7 @@ body, html {
 .bg {
   /* The image used */
   background-image:
-  linear-gradient(45deg, rgba(
-    145, 146, 122, 0.62), rgba(244, 238, 240, 0.58)), url(
+  linear-gradient(45deg, rgba(161, 161, 146, 0.4), rgba(244, 238, 240, 0.3)), url(
 'https://source.unsplash.com/updW-QUccFE');
 
   // background-image: url("https://source.unsplash.com/updW-QUccFE");
@@ -39,6 +39,7 @@ h1 {
   color: white;
   font-family: 'Roboto Mono', monospace;
   font-size: 72px;
+  box-shadow: 8px;
 }
 
 h2 {
@@ -52,5 +53,5 @@ h2 {
 .arrivals {
   position: relative;
   left: 150px;
-  top: 50px;
+  top: 300px;
 }
