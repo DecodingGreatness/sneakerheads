@@ -6,6 +6,8 @@ User.destroy_all
 puts 'Database Clean!'
 
 puts 'Creating users...'
+
+
 user1 = User.new(username: "batman",
                 password: "password123",
                 email: "batman@123.com",
@@ -14,6 +16,7 @@ user1 = User.new(username: "batman",
                 address: "888 This Street")
 user1.save!
 
+
 user2 = User.new(username: "wonderer",
                 password: "password123",
                 email: "wonderer@234.com",
@@ -21,19 +24,8 @@ user2 = User.new(username: "wonderer",
                 last_name: "Smith",
                 address: "111 That Street")
 user2.save!
+users = User.all
 
-# 20.times do
-#   user = User.new(username: Faker::Internet.username(specifier: 5..10),
-#                    password: Faker::Internet.password(min_length: 8),
-#                    email: Faker::Internet.email,
-#                    first_name: Faker::Name.first_name,
-#                    last_name: Faker::Name.last_name,
-#                    address: Faker::Address.street_address)
-
-#   user.save!
-# end
-
-# users = User.all
 
 puts 'Creating sneakers...'
 sneaker1 = Sneaker.new(brand: "Nike", price: 250, size: 11, verified: true)
@@ -55,19 +47,6 @@ sneaker4.save!
 sneaker5 = Sneaker.new(brand: "Reebok", price: 420, size: 7, verified: false)
 sneaker5.user = user2
 sneaker5.save!
-
-# 20.times do
-#   sneaker = Sneaker.new(
-#     brand: %w[Nike Adidas NewBalance Reebok Puma].sample,
-#     price: (50..500).to_a.sample,
-#     size: (5..14).to_a.sample,
-#     model: %w[Jordans Yeezy NB-500 Classic Cell-king].sample,
-#     verified: [true, false].sample
-#   )
-
-#   sneaker.user = users.sample
-#   sneaker.save!
-# end
 
 puts 'Creating transactions...'
 
@@ -94,28 +73,6 @@ puts 'Creating transactions...'
     sneaker: sneaker3
   )
   transaction3.save!
-
-
-  # 10.times do
-  # has_review = [true, false].sample
-  # transaction = Transaction.new(
-  #   status: %w[Pending Completed].sample,
-  #   buyer: users.sample,
-  #   seller: users.sample,
-  #   sneaker: Sneaker.all.sample,
-  #   traded_sneaker: [Sneaker.all.sample, nil].sample
-  # )
-
-  # if has_review
-  #   puts "Creating review for Transaction: ##{transaction.id}..."
-  #   review = Review.new(
-  #     content: Faker::TvShows::BojackHorseman.quote,
-  #     seller_rating: rand(1..5),
-  #     buyer_rating: rand(1..5)
-  #   )
-  #   review.order = transaction
-  #   review.save!
-  # end
 
   review1 = Review.new(
     buyer_content: "Awesome seller",

@@ -1,7 +1,13 @@
 class SneakersController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:show]
+
+  def index
+    @sneaker = Sneaker.all
+  end
 
   def new
     @sneaker = Sneaker.new
+
     @user = User.find(params[:user_id])
   end
 
@@ -19,7 +25,6 @@ class SneakersController < ApplicationController
       render :new
     end
   end
-
 
   # I need to filter sneakers by price
 
