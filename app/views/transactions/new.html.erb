@@ -1,0 +1,17 @@
+<h1>Confirm Purchase</h1>
+<br>
+<h2>Description</h2>
+<p> ======================== </p>
+<ul>
+  <li>Sneaker ID: <%= @sneaker.id %></li>
+  <li><%= @sneaker.brand %>, size: <%= @sneaker.size %></li>
+  <li>Price: $<%= @sneaker.price %></li>
+</ul>
+
+<%= simple_form_for [ @sneaker, @transaction ] do |f| %>
+<%= f.input :sneaker_id, :as => :hidden, :input_html => { :value => @sneaker.id }  %>
+<%= f.input :seller_id, :as => :hidden, :input_html => { :value => @sneaker.user.id }  %>
+<%= f.input :buyer_id, :as => :hidden, :input_html => { :value => current_user.id }  %>
+
+<%= f.submit "Purchase", class: "btn btn-primary" %>
+<% end %>

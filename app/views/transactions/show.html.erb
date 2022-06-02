@@ -1,0 +1,12 @@
+<h1>Transaction Details</h1>
+<br>
+<h4>Transaction no.: <%= @transaction.id %></h4>
+<br>
+<h3>Description</h3>
+<p> ======================== </p>
+<ul>
+  <li>Sneaker ID: <%= @sneaker.id %></li>
+  <li><%= @sneaker.brand %> Size: <%= @sneaker.size %></li>
+  <li>Price $<%= @transaction.sneaker.price %></li>
+</ul>
+<%= link_to "My Collection", user_path(current_user) %>

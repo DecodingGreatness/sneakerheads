@@ -5,4 +5,10 @@ Rails.application.routes.draw do
   resources :users do
     resources :sneakers, only: [ :new, :create ]
   end
+
+  resources :sneakers do
+    resources :transactions
+  end
+
+
 end
