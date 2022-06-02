@@ -1,5 +1,5 @@
 <div class="container">
-  <h2><%= @user.username %></h2>
+  <h2><%= @user.username.capitalize %></h2>
   <div class="d-flex justify-content-between">
     <h3>Rating</h3>
     <%= link_to 'reviews', "#" %>
@@ -9,7 +9,7 @@
 <div class="container mt-5">
   <div class="d-flex justify-content-between">
     <h3>My Collection</h3>
-    <%= link_to 'Add Sneaker', "#" %>
+    <%= link_to 'Add Sneaker', new_user_sneaker_path(@user, @sneaker) %>
   </div>
 
   <div class="row">
