@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <h2><%= @user.username.capitalize %></h2>
+    <p>
+    <h3>Rating</h3>
+    <h3>Review</h3>
+    <%= link_to 'Add new shoes', new_user_sneaker_path(@user, @sneaker) %>
+
+    </p>
+  </div>
+
+  <%= link_to 'Homepage', root_path %>
+</div>
