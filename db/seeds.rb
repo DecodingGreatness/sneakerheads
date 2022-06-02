@@ -8,7 +8,7 @@ puts 'Database Clean!'
 puts 'Creating users...'
 20.times do
   user = User.new(username: Faker::Internet.username(specifier: 5..10),
-                   password: Faker::Internet.password(min_length: 8),
+                   password: "123456",
                    email: Faker::Internet.email,
                    first_name: Faker::Name.first_name,
                    last_name: Faker::Name.last_name,
@@ -16,6 +16,7 @@ puts 'Creating users...'
 
   user.save!
 end
+
 
 users = User.all
 
@@ -29,7 +30,7 @@ puts 'Creating sneakers...'
     verified: [true, false].sample
   )
 
-  sneaker.user = users.sample
+  sneaker.user = users.first
   sneaker.save!
 end
 

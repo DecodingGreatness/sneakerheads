@@ -1,0 +1,22 @@
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-12 col-lg-8">
+    <%= cl_image_tag("a0fxd7saxlav374ibgpfrt7ip416.jpg", width: 400, height: 300, crop: :fill) %>
+       <h2>Brand: <%= @sneaker.brand %></h2>
+        <p>Price: $<%= @sneaker.price %></p>
+        <p>Size: <%= @sneaker.size %></p>
+        <p>Condition: <%= @sneaker.condition %> </p>
+        <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm"/>
+    </div>
+
+    <div class="col-12 col-lg-4">
+    <a class="btn btn-gradient" href="#">Buy</a>
+
+    <a class="btn btn-gradient" href="#">Trade</a>
+
+    </div>
+
+  </div>
+</div>
