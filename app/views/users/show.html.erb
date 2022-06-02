@@ -1,12 +1,27 @@
 <div class="container">
   <div class="row">
     <h2><%= @user.username.capitalize %></h2>
-    <p>
-    <h3>Rating</h3>
-    <h3>Review</h3>
-    <%= link_to 'Add new shoes', new_user_sneaker_path(@user, @sneaker) %>
+    <div class="d-inline">
+      <p>
+        <h3>Rating</h3>
+        <h3>Review</h3>
+      </p>
+    <div class="container d-inline p-2">
+      <p>
+        <h2>My collections</h2>
+          <div class="btn btn-primary active">
+            <%= link_to 'Add new shoe', new_user_sneaker_path(@user, @sneaker) %>
+          </div>
+      </p>
+    </div>
+      <% @sneakers.each do |sneaker|%>
+        <div>
+          <div><%= sneaker.brand %></div>
+          <div><%= sneaker.price %></div>
+        </div>
+      <% end %>
 
-    </p>
+    </div>
   </div>
 
   <%= link_to 'Homepage', root_path %>
