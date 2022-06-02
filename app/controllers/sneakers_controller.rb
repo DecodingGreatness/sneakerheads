@@ -4,10 +4,17 @@ class SneakersController < ApplicationController
   end
 
   def create
-    @sneaker = Sneaker.new(review_params)
-    @user = User.find(paramsuser_id)
+    @sneaker = Sneaker.new(sneaker_params)
+    @user = User.find(user_id)
     @sneaker.user = @user
     @sneaker.save
     direct_to user_path(@user)
   end
+
+  private
+
+  def sneaker_params
+    params.require(:sneaker).permit(:brand, :model, :price, :size, :condition)
+  end
+
 end
