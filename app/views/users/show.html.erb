@@ -5,7 +5,7 @@
     <%= link_to 'reviews', "#" %>
   </div>
 </div>
- 
+
 <div class="container mt-5">
   <div class="d-flex justify-content-between">
     <h3>My Collection</h3>
@@ -13,13 +13,15 @@
   </div>
 
   <div class="row">
-
     <% @sneakers.each do |sneaker| %>
       <div class="col-3">
-        <img src="<%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>" alt="">
         <h4><%= sneaker.brand %></h4>
         <p>$<%= sneaker.price %></p>
       </div>
     <% end %>
   </div>
 </div>
+
+<% @sneaker.photos.each do |photo| %>
+      <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+    <% end %>
