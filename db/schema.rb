@@ -39,16 +39,16 @@ ActiveRecord::Schema.define(version: 2022_06_01_095713) do
 
   create_table "transactions", force: :cascade do |t|
     t.bigint "sneaker_id", null: false
-    t.bigint "traded_sneaker_id_id"
-    t.bigint "buyer_id_id", null: false
-    t.bigint "seller_id_id", null: false
+    t.bigint "traded_sneaker_id"
+    t.bigint "buyer_id", null: false
+    t.bigint "seller_id", null: false
     t.string "status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["buyer_id_id"], name: "index_transactions_on_buyer_id_id"
-    t.index ["seller_id_id"], name: "index_transactions_on_seller_id_id"
+    t.index ["buyer_id"], name: "index_transactions_on_buyer_id"
+    t.index ["seller_id"], name: "index_transactions_on_seller_id"
     t.index ["sneaker_id"], name: "index_transactions_on_sneaker_id"
-    t.index ["traded_sneaker_id_id"], name: "index_transactions_on_traded_sneaker_id_id"
+    t.index ["traded_sneaker_id"], name: "index_transactions_on_traded_sneaker_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -70,7 +70,7 @@ ActiveRecord::Schema.define(version: 2022_06_01_095713) do
   add_foreign_key "reviews", "transactions"
   add_foreign_key "sneakers", "users"
   add_foreign_key "transactions", "sneakers"
-  add_foreign_key "transactions", "sneakers", column: "traded_sneaker_id_id"
-  add_foreign_key "transactions", "users", column: "buyer_id_id"
-  add_foreign_key "transactions", "users", column: "seller_id_id"
+  add_foreign_key "transactions", "sneakers", column: "traded_sneaker_id"
+  add_foreign_key "transactions", "users", column: "buyer_id"
+  add_foreign_key "transactions", "users", column: "seller_id"
 end

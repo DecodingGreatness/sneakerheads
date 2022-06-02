@@ -1,0 +1,7 @@
+<%= simple_form_for [ @user, @sneaker ] do |f| %>
+  <%= f.input :model %>
+  <%= f.input :price %>
+  <%= f.input :size %>
+  <%= f.input :condition %>
+  <%= f.submit "Add Sneaker", class: "btn btn-primary" %>
+<% end %>
