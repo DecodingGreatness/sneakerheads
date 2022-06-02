@@ -11,13 +11,10 @@ class SneakersController < ApplicationController
     direct_to user_path(@user)
   end
 
+  private
 
-private
-
-private
-
-def sneaker_params
-  params.require(:sneaker).permit(:model, :price, :size, :condition)
-end
+  def sneaker_params
+    params.require(:sneaker).permit(:brand, :model, :price, :size, :condition)
+  end
 
 end
