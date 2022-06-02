@@ -22,7 +22,8 @@ ActiveRecord::Schema.define(version: 2022_06_02_063945) do
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.text "content"
+    t.text "buyer_content"
+    t.text "seller_content"
     t.integer "seller_rating"
     t.integer "buyer_rating"
     t.bigint "transaction_id", null: false
