@@ -14,7 +14,7 @@ class SneakersController < ApplicationController
   private
 
   def sneaker_params
-    params.require(:sneaker).permit(:model, :price, :size, :condition)
+    params.require(:sneaker).permit(:brand, :model, :price, :size, :condition)
   end
 
 end
