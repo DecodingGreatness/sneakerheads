@@ -16,7 +16,10 @@
     <% @sneakers.each do |sneaker| %>
       <div class="col-3">
         <h4><%= sneaker.brand %></h4>
+        <p><%= sneaker.model %></p>
         <p>$<%= sneaker.price %></p>
+        <p><%= sneaker.size %></p>
+        <p><%= sneaker.condition %></p>
       </div>
     <% end %>
   </div>
