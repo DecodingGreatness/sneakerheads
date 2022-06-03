@@ -1,6 +1,7 @@
 <div class="bg">
   <div class="container">
     <div class="row">
+
       <div class="username d-flex justify-content-end py-4 mb-5">
         <% if user_signed_in? %>
           <p class="light">
@@ -10,53 +11,35 @@
       </div>
     </div>
 
-      <div class="arrivals d-flex align-items-center mt-5 pt-5">
-        <div class="row">
-          <div class="col-6">
-            <h1>THE NEW ARRIVALS</h1>
-            <button class="b">ORDER NOW</button>
+    <div class="arrivals d-flex align-items-center mt-5 pt-5">
+      <div class="row">
+        <div class="col-6">
+          <h1>THE NEW ARRIVALS</h1>
+          <button class="b">ORDER NOW</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+
+    <% Sneaker::BRANDS.each do |brand| %>
+
+      <div class="col-3">
+        <div class="card-product mt-5">
+          <img src="https://source.unsplash.com/XPBYi4K8vFI" />
+          <div class="card-product-infos">
+            <h2>
+            <%= link_to "Brands Name", brand_sneakers_path(brand) %>
+            </h2>
+            <p>Product description with <strong>relevant info</strong> only.</p>
           </div>
         </div>
       </div>
 
-        <div class="row">
-          <div class="col-3">
-            <div class="card-product mt-5">
-              <img src="https://source.unsplash.com/XPBYi4K8vFI" />
-              <div class="card-product-infos">
-                <h2>Product name</h2>
-                <p>Product description with <strong>relevant info</strong> only.</p>
-              </div>
-            </div>
-          </div>
+    <% end %>
 
-            <div class="col-3">
-              <div class="card-product mt-5">
-                <img src="https://source.unsplash.com/kn7cfz5ESIE" />
-                <div class="card-product-infos">
-                  <h2>Product name</h2>
-                  <p>Product description with <strong>relevant info</strong> only.</p>
-                </div>
-              </div>
-            </div>
+    </div>
 
-              <div class="col-3">
-                <div class="card-product mt-5">
-                  <img src="https://source.unsplash.com/Sw-pqjQfsO4" />
-                  <div class="card-product-infos">
-                    <h2>Product name</h2>
-                    <p>Product description with <strong>relevant info</strong> only.</p>
-                  </div>
-                </div>
-              </div>
-                <div class="col-3">
-                  <div class="card-product mt-5">
-                    <img src="https://source.unsplash.com/HcqA34-uWo4" />
-                    <div class="card-product-infos">
-                      <h2>Product name</h2>
-                      <p>Product description with <strong>relevant info</strong> only.</p>
-                    </div>
-                  </div>
-                </div>
+
   </div>
 </div>
