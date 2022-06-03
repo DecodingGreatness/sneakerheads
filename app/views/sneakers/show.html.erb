@@ -21,10 +21,10 @@
 
     <div class="col-6">
       <h1><%= @sneaker.brand %></h1>
-      <h2><%= @sneaker.price %></h2>
-      <p><%= @sneaker.size %></p>
-      <a class="btn btn-flat" href="#">Back To Browser</a>
-      <a class="btn btn-flat" href="#">Buy Now</a>
+      <h2>$<%= @sneaker.price %></h2>
+      <p>Size <%= @sneaker.size %></p>
+      <a> <%= link_to "Back To Browser", "#", class: "btn btn-gradient" %></a>
+      <a> <%= link_to "Buy Now", "#", class: "btn btn-gradient" %></a>
     </div>
   </div>
   </div>
