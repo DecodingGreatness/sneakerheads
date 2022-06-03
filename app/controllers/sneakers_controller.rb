@@ -2,7 +2,11 @@ class SneakersController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show]
 
   def index
-    @sneaker = Sneaker.all
+    if params[:query].present?
+      @sneaker = Sneaker.where(brand: params[:query])
+    else
+      @sneaker = Sneaker.all
+    end
   end
 
   def new
@@ -15,6 +19,10 @@ class SneakersController < ApplicationController
     @sneaker = Sneaker.find(params[:id])
   end
 
+  def brand
+    @brands = Sneaker.where(brand: params[:brand_name])
+  end
+
   def create
     @sneaker = Sneaker.new(sneaker_params)
     @user = User.find(params[:user_id])
@@ -25,21 +33,6 @@ class SneakersController < ApplicationController
       render :new
     end
   end
-
-  # I need to filter sneakers by price
-
-  # sneakers.price
-
-  # I need to filter sneakers by size
-
-# sneakers.size
-
-  # I need to filter sneakers by brand
-
-# sneakers.brand
-
-
-
 
   private
 

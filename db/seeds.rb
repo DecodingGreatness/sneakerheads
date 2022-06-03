@@ -1,4 +1,4 @@
-require "open-uri"
+# require "open-uri"
 
 # file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
 # article = Article.new(title: 'NES', body: "A great console")
@@ -35,7 +35,9 @@ users = User.all
 puts 'Creating sneakers...'
 
 # file = URI.open(asset_path 'images/a0fxd7saxlav374ibgpfrt7ip416.jpg')
+
 sneaker1 = Sneaker.new(brand: "Nike", model: "Air Wonder", price: 250, size: 11, verified: true)
+
 sneaker1.user = user1
 # sneaker1.photos.attach(io: file, filename: 'a0fxd7saxlav374ibgpfrt7ip416.jpg', content_type: 'image/jpg')
 sneaker1.save!

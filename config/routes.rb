@@ -5,10 +5,10 @@ Rails.application.routes.draw do
   resources :users do
     resources :sneakers, only: [ :new, :create, :show ]
   end
-  
+
   resources :sneakers do
     collection do
-      get :brands
+      get 'brand/:brand_name', to: 'sneakers#brand', as: :brand
     end
   end
 

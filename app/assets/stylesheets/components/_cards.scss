@@ -4,11 +4,8 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-}
-
-.card-product::after {
-  background: rgb(187, 187, 187);
-  opacity: 0.7;
+  background: rgba(120, 120, 120, 0.8);
+  color: white;
 }
 
 .card-product img {
