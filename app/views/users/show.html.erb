@@ -12,9 +12,16 @@
     <%= link_to 'Add Sneaker', new_user_sneaker_path(@user, @sneaker) %>
   </div>
 
+
+
   <div class="row">
     <% @sneakers.each do |sneaker| %>
       <div class="col-3">
+        <% if sneaker.photos.attached? %>
+          <% sneaker.photos.each do |photo| %>
+            <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+            <% end %>
+        <% end %>
         <h4><%= sneaker.brand %></h4>
         <p><%= sneaker.model %></p>
         <p>$<%= sneaker.price %></p>
