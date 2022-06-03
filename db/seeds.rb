@@ -1,3 +1,9 @@
+require "open-uri"
+
+# file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
+# article = Article.new(title: 'NES', body: "A great console")
+# article.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
 puts 'Cleaning database...'
 Review.destroy_all
 Transaction.destroy_all
@@ -26,10 +32,12 @@ user2 = User.new(username: "wonderer",
 user2.save!
 users = User.all
 
-
 puts 'Creating sneakers...'
+
+file = URI.open(asset_path 'images/a0fxd7saxlav374ibgpfrt7ip416.jpg')
 sneaker1 = Sneaker.new(brand: "Nike", price: 250, size: 11, verified: true)
 sneaker1.user = user1
+sneaker1.photos.attach(io: file, filename: 'a0fxd7saxlav374ibgpfrt7ip416.jpg', content_type: 'image/jpg')
 sneaker1.save!
 
 sneaker2 = Sneaker.new(brand: "Addidas", price: 88, size: 10, verified: false)
