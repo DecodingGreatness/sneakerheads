@@ -16,7 +16,7 @@ class SneakersController < ApplicationController
   end
 
   def brand
-    @brand = Brand.all
+    @brands = Sneaker.where(brand: params[:brand_name])
   end
 
   def create
