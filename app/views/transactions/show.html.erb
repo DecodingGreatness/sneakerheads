@@ -1,15 +1,44 @@
 <%# Transaction success page %>
-<h1>Transaction Details</h1>
-<br>
-<h4>Transaction no.: <%= @transaction.id %></h4>
-<br>
-<h3>Description</h3>
-<p> ======================== </p>
-<ul>
-  <li>Seller: <%= @seller.first_name %></li>
-  <li>New Owner: <%= @sneaker.user.first_name %></li>
-  <li>Sneaker ID: <%= @sneaker.id %></li>
-  <li><%= @sneaker.brand %> <%= @sneaker.model %> Size: <%= @sneaker.size %></li>
-  <li>Price $<%= @transaction.sneaker.price %></li>
-</ul>
-<%= link_to "Home", root_path %>
+<div class="container">
+  <div class="row">
+    <div class="col-3">
+      <img src="#" alt="carousel gallery">
+    </div>
+  </div>
+  <div>
+    <div class="row">
+       <h2>Transaction No.: <%= @transaction.id %></h2>
+    </div>
+
+    <div class="row">
+      <div class="col-3">
+        <p>Description:</p>
+      </div>
+      <div class="col-6">
+        <p><%= @sneaker.brand %> <%= @sneaker.model %>, Size: <%= @sneaker.size %></p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-3">
+        <p>Sneaker ID:</p>
+      </div>
+      <div class="col-6">
+        <p><%= @sneaker.id %></p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-3">
+        <p>Price:</p>
+      </div>
+      <div class="col-6">
+        <p><%= @sneaker.price %></p>
+      </div>
+    </div>
+
+    <div class="row">
+       <%= link_to "Home", root_path %>
+    </div>
+  </div>
+</div>
