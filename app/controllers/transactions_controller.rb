@@ -3,6 +3,10 @@ class TransactionsController < ApplicationController
   def show
     @sneaker = Sneaker.find(params[:sneaker_id])
     @transaction = Transaction.find(params[:id])
+
+    @buyer = @transaction.buyer
+    @seller = @transaction.seller
+    @sneaker.user = @transaction.buyer
   end
 
   def new

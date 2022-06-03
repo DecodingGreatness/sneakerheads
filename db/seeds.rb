@@ -34,10 +34,10 @@ users = User.all
 
 puts 'Creating sneakers...'
 
-file = URI.open(asset_path 'images/a0fxd7saxlav374ibgpfrt7ip416.jpg')
-sneaker1 = Sneaker.new(brand: "Nike", price: 250, size: 11, verified: true)
+# file = URI.open(asset_path 'images/a0fxd7saxlav374ibgpfrt7ip416.jpg')
+sneaker1 = Sneaker.new(brand: "Nike", model: "Air Wonder", price: 250, size: 11, verified: true)
 sneaker1.user = user1
-sneaker1.photos.attach(io: file, filename: 'a0fxd7saxlav374ibgpfrt7ip416.jpg', content_type: 'image/jpg')
+# sneaker1.photos.attach(io: file, filename: 'a0fxd7saxlav374ibgpfrt7ip416.jpg', content_type: 'image/jpg')
 sneaker1.save!
 
 sneaker2 = Sneaker.new(brand: "Addidas", model: "CONTINENTAL 80", price: 88, size: 10, verified: false)
@@ -48,7 +48,7 @@ sneaker3 = Sneaker.new(brand: "Puma", model: "Neymar Jr. Wild Rider Black Traine
 sneaker3.user = user1
 sneaker3.save!
 
-sneaker4 = Sneaker.new(brand: "NewBalance", model: "NB Numeric 272", price: 90, size: 6, verified: true)
+sneaker4 = Sneaker.new(brand: "New Balance", model: "NB Numeric 272", price: 90, size: 6, verified: true)
 sneaker4.user = user2
 sneaker4.save!
 
