@@ -24,7 +24,7 @@
       <h2>$<%= @sneaker.price %></h2>
       <p>Size <%= @sneaker.size %></p>
       <a> <%= link_to "Back To Browser", "#", class: "btn btn-gradient" %></a>
-      <a> <%= link_to "Buy Now", "#", class: "btn btn-gradient" %></a>
+      <a> <%= link_to "Buy Now", new_sneaker_transaction_path(@sneaker), class: "btn btn-gradient" %></a>
     </div>
   </div>
   </div>
