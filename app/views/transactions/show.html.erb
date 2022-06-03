@@ -5,8 +5,10 @@
 <h3>Description</h3>
 <p> ======================== </p>
 <ul>
+  <li>New Owner: <%= @transaction.buyer.id %></li>
+  <li>Old Owner: <%= @transaction.seller.id %></li>
   <li>Sneaker ID: <%= @sneaker.id %></li>
-  <li><%= @sneaker.brand %> Size: <%= @sneaker.size %></li>
+  <li><%= @sneaker.brand %> <%= @sneaker.model %> Size: <%= @sneaker.size %></li>
   <li>Price $<%= @transaction.sneaker.price %></li>
 </ul>
 <%= link_to "My Collection", user_path(current_user) %>

@@ -14,12 +14,10 @@ class TransactionsController < ApplicationController
     @transaction = Transaction.new(transaction_params)
     @transaction.save!
 
-    # @transaction.sneaker.user_id = @transaction.buyer_id
-    @buyer = @transaction.buyer
-    # @seller = @transaction.seller
     @sneaker = @transaction.sneaker
+    @sneaker.user = @transaction.buyer
+    @sneaker.save!
 
-    @sneaker.user = @buyer
     redirect_to sneaker_transaction_path(@transaction.sneaker, @transaction)
   end
 
