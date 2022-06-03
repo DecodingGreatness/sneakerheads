@@ -1,0 +1,43 @@
+<%# Purchase page %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-3">
+      <img src="#" alt="carousel gallery">
+    </div>
+  </div>
+  <div>
+    <div class="row">
+      <div class="col-3">
+        <h2>Nike</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-3">
+        <p>Description:</p>
+      </div>
+      <div class="col-6">
+        <p><%= @sneaker.brand %> <%= @sneaker.model %>, Size: <%= @sneaker.size %></p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-3">
+        <p>Price: <%= @sneaker.price %></p>
+      </div>
+      <div class="col-6">
+        <p>$100</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <%= simple_form_for [ @sneaker, @transaction ] do |f| %>
+        <%= f.input :sneaker_id, :as => :hidden, :input_html => { :value => @sneaker.id }  %>
+        <%= f.input :seller_id, :as => :hidden, :input_html => { :value => @sneaker.user.id }  %>
+        <%= f.input :buyer_id, :as => :hidden, :input_html => { :value => current_user.id }  %>
+        <%= f.submit "Confirm Purchase", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>

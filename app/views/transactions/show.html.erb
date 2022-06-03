@@ -1,0 +1,15 @@
+<%# Transaction success page %>
+<h1>Transaction Details</h1>
+<br>
+<h4>Transaction no.: <%= @transaction.id %></h4>
+<br>
+<h3>Description</h3>
+<p> ======================== </p>
+<ul>
+  <li>Seller: <%= @seller.first_name %></li>
+  <li>New Owner: <%= @sneaker.user.first_name %></li>
+  <li>Sneaker ID: <%= @sneaker.id %></li>
+  <li><%= @sneaker.brand %> <%= @sneaker.model %> Size: <%= @sneaker.size %></li>
+  <li>Price $<%= @transaction.sneaker.price %></li>
+</ul>
+<%= link_to "Home", root_path %>
