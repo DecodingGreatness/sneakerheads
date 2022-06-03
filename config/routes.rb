@@ -11,4 +11,10 @@ Rails.application.routes.draw do
       get 'brand/:brand_name', to: 'sneakers#brand', as: :brand
     end
   end
+
+  resources :sneakers do
+    resources :transactions
+  end
+
+
 end
