@@ -3,5 +3,6 @@
   <%= f.input :price %>
   <%= f.input :size %>
   <%= f.input :condition %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
   <%= f.submit "Add Sneaker", class: "btn btn-primary" %>
 <% end %>
