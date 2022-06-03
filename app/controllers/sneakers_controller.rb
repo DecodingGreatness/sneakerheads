@@ -15,6 +15,10 @@ class SneakersController < ApplicationController
     @sneaker = Sneaker.find(params[:id])
   end
 
+  def brand
+    @brand = Brand.all
+  end
+
   def create
     @sneaker = Sneaker.new(sneaker_params)
     @user = User.find(params[:user_id])
