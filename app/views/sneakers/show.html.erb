@@ -1,28 +1,27 @@
-<%= link_to "Sneaker Page", user_path(current_user) %>
+
 <div class="container">
   <div class="row">
-
-    <div class="col-12 col-lg-8">
-      <% if @sneaker.photos.attached? %>
-        <% @sneaker.photos.each do |photo| %>
-          <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-          <% end %>
-      <% end %>
-      <div class="card-sneaker-infos">
-        <div>
-          <h2>Brand:<%= @sneaker.brand %></h2>
-          <p>Size:<%= @sneaker.size %></p>
-          <p>Condition:<%= @sneaker.condition %> </p>
+    <div class="col-6">
+      <div class="sneaker-images">
+        <img src="https://source.unsplash.com/XPBYi4K8vFI" />
+          <div class="row">
+            <div class="col-3">
+              <div class="card-product mt-5">
+              <div class="card-sneaker" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/XPBYi4K8vFI)">
+            </div>
+          </div>
         </div>
-        <h2 class="card-sneaker-pricing"> Size:<%= @sneaker.size %></h2>
-        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-    </div>
-
-    <div class="container">
-      <div class="col-12 col-lg-4">
-        <a class="btn btn-gradient" href="#">Buy</a>
-        <a class="btn btn-gradient" href="#">Trade</a>
       </div>
     </div>
   </div>
- </div>
+
+    <div class="col-6">
+      <h1><%= @sneaker.brand %></h1>
+      <h2><%= @sneaker.price %></h2>
+      <p><%= @sneaker.size %></p>
+      <a class="btn btn-flat" href="#">Back To Browser</a>
+      <a class="btn btn-flat" href="#">Buy Now</a>
+    </div>
+  </div>
+  </div>
+</div>
