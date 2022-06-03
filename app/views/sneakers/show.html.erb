@@ -1,4 +1,4 @@
-
+<%= link_to "Sneaker Page", sneakers_path %>
 <div class="container">
   <div class="row">
 
@@ -10,17 +10,19 @@
       <% end %>
       <div class="card-sneaker-infos">
         <div>
-          <h2>Brand: <%= @sneaker.brand %></h2>
-          <p>Size: <%= @sneaker.size %></p>
-          <p>Condition: <%= @sneaker.condition %> </p>
+          <h2>Brand:<%= @sneaker.brand %></h2>
+          <p>Size:<%= @sneaker.size %></p>
+          <p>Condition:<%= @sneaker.condition %> </p>
         </div>
-        <h2 class="card-sneaker-pricing"> Size: <%= @sneaker.size %></h2>
+        <h2 class="card-sneaker-pricing"> Size:<%= @sneaker.size %></h2>
         <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
     </div>
 
-    <div class="col-12 col-lg-4">
-      <a class="btn btn-gradient" href="#">Buy</a>
-      <a class="btn btn-gradient" href="#">Trade</a>
+    <div class="container">
+      <div class="col-12 col-lg-4">
+        <a class="btn btn-gradient" href="#">Buy</a>
+        <a class="btn btn-gradient" href="#">Trade</a>
+      </div>
     </div>
   </div>
-</div>
+ </div>
