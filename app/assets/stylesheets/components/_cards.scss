@@ -48,8 +48,9 @@
   object-fit: cover;
 }
 
-#sneaker-card-avator {
-  border-radius: 50%;
+#sneaker-card-avatar {
+  // width: 32px;
+  // border-radius: 50%;
   position: relative;
   right: 32px;
 }
@@ -100,4 +101,14 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 8px;
+}
+
+// Transaction-card
+.transaction-card {
+  width: 1000px;
+  height: 600px;
+  background-color: rgba($color: #c3c3c3, $alpha: 0.4);
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: 16px;
 }
