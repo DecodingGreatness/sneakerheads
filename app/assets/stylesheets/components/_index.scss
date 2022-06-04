@@ -6,6 +6,7 @@
 @import "button";
 @import "cards";
 @import "bg_card";
+@import "grid";
 
 // Import font family
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
@@ -34,8 +35,64 @@ h2 {
 
 // Others
 
-.arrivals {
-  // position: relative;
-  // left: 20px;
-  // top: 100px;
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// hypertext styling
+a {
+  outline: none;
+  text-decoration: none;
+  padding: 2px 1px 0;
+}
+
+a:link {
+  color: #ffffff;
+}
+
+a:visited {
+  color: #ffffff;
+}
+
+a:focus {
+  border-bottom: 1px solid;
+}
+
+a:hover {
+  border-bottom: 1px solid;
+}
+
+a:active {
+  background: #ffffff;
 }
