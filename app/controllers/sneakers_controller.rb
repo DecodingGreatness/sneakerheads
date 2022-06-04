@@ -21,15 +21,11 @@ class SneakersController < ApplicationController
 
   def brand
     @brands = Sneaker.where(brand: params[:brand_name])
-<<<<<<< HEAD
     # @user = @brand.user_id
     # @sneaker = @brand
     # raise
     # @sneaker = Sneaker.find(params[:id])
     # @user = User.find(params[:user_id])
-=======
-    # raise
->>>>>>> 1753551ae76ab5ec58b4c977e995683be3cb7e61
   end
 
   def create
