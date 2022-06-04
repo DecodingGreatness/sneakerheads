@@ -4,7 +4,6 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @sneakers = @user.sneakers
-    # raise
   end
 
   # def edit
