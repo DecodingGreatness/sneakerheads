@@ -21,7 +21,6 @@ class SneakersController < ApplicationController
 
   def brand
     @sneakers = Sneaker.where(brand: params[:brand_name])
-    # raise
   end
 
   def create

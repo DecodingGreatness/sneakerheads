@@ -1,3 +1,4 @@
+<%# Brand page %>
 <div class="user-bg">
   <h1 class="my-3">Brand: <%= @sneakers.last.brand %></h1>
 
@@ -43,7 +44,7 @@
         <%# button %>
         <div class="row">
           <div class="col-6">
-            <button class="s-btn"><%= link_to "View Sneakers", sneakers_path(@sneaker) %></button>
+            <button class="s-btn"><%= link_to "View Details", user_sneaker_path(sneaker.user, sneaker) %></button>
           </div>
         </div>
       </div>
