@@ -1,9 +1,14 @@
+
+  <%# Transaction Successful page %>
 <div class="transaction-bg">
-  <div class="container">
+  <div class="container transaction-card">
+    <div class="row">
+      <h2>Successful Transaction. Congrats!</h2>
+    </div>
     <div class="row">
       <%# photo of transacted shoe %>
       <div class="col-6">
-        <img src="https://source.unsplash.com/NoVnXXmDNi0" alt="carousel gallery" height="100%" width="100%">
+        <%= image_tag "airjordon.png", alt: "Nike shoe", width: 500, height: 450 %>
       </div>
       <%# transaction details %>
       <div class="col-6">
@@ -11,7 +16,7 @@
           <%# Transaction id %>
           <div class="row">
             <div class="col-6">
-              <h2>Transaction No: <%= @transaction.id %></h2>
+              <h2>Transaction No #: <%= @transaction.id %></h2>
             </div>
           </div>
           <%# Model %>
@@ -21,6 +26,15 @@
             </div>
             <div class="col-5">
               <h3><%= @sneaker.model %></h3>
+            </div>
+          </div>
+          <%# Sneaker id %>
+              <div class="row d-flex flex-start">
+            <div class="col-3">
+              <h3>Sneaker ID:</h3>
+            </div>
+            <div class="col-5">
+              <h3><%= @sneaker.id %></h3>
             </div>
           </div>
           <%# Price %>
@@ -41,17 +55,6 @@
               <h3><%= @sneaker.size %></h3>
             </div>
           </div>
-          <%# Description %>
-          <div class="row d-flex flex-start">
-            <div class="col-3">
-              <h3>Description:</h3>
-            </div>
-            <div class="col-6">
-              <span><h5>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </h5></span>
-            </div>
-          </div>
           <%# Date %>
           <div class="row d-flex flex-start">
             <div class="col-3">
@@ -61,58 +64,21 @@
               <h4>26 June 2022, 0900am </h4>
             </div>
           </div>
+          <div class="row">
+            <button class="b w-70"><%= link_to "My Collection", user_path(current_user) %></button>
+          </div>
         </div>
       </div>
     </div>
+      <%# description %>
+      <div class="row d-flex flex-start mt-3">
+        <div class="col-2">
+          <h3>Description:</h3>
+        </div>
+        <div class="col-9">
+          <span><h5>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </h5></span>
+        </div>
+      </div>
   </div>
-
-
-
-
-
-  <%# Transaction Successful page %>
-  <div class="container ">
-    <div class="row">
-      <div class="col-3">
-        <img src="#" alt="carousel gallery">
-      </div>
-    </div>
-    <div>
-      <div class="row">
-        <h2>Transaction No.: <%= @transaction.id %></h2>
-      </div>
-
-      <div class="row">
-        <div class="col-3">
-          <p>Description:</p>
-        </div>
-        <div class="col-6">
-          <p><%= @sneaker.brand %> <%= @sneaker.model %>, Size: <%= @sneaker.size %></p>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-3">
-          <p>Sneaker ID:</p>
-        </div>
-        <div class="col-6">
-          <p><%= @sneaker.id %></p>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-3">
-          <p>Price:</p>
-        </div>
-        <div class="col-6">
-          <p><%= @sneaker.price %></p>
-        </div>
-      </div>
-
-      <div class="row">
-        <%= link_to "My Collection", user_path(current_user) %>
-      </div>
-    </div>
-  </div>
-
-</div>
