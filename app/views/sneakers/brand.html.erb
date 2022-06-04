@@ -1,10 +1,9 @@
-<% @brands.each do |brand| %>
-  <h3>
-    Sneaker size:  <%= brand.size %>
-  </h3>
-  <h3>
-    Sneaker price: <%= brand.price %>
-  </h3>
+<div class="user-bg">
+  <% @brands.each do |brand| %>
+    <h3>Sneaker name:  <%= brand.model %></h3>
+    <h3>Sneaker size:  <%= brand.size %></h3>
+    <h3>Sneaker price: <%= brand.price %></h3>
+    <h3><%# <%= link_to "Show more", user_sneaker_path(@user, @sneaker) %></h3>
 
   <%= link_to "Show details", sneakers_path(@sneaker) %>
 
