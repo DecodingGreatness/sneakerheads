@@ -27,28 +27,57 @@
     </div>
   </div>
 
+<div class="container brand-grid">
+  <% @sneakers.each do |sneaker| %>
 
+    <div class="container sneaker-card">
+      <%# row 1 - Brand Logo & Avator Logo %>
+      <div class="row d-flex justify-content-between">
+        <div class="col-2">
+          <%= image_tag "brand_logos/nike.png", alt: "Nike Logo", width: 40 %>
+        </div>
 
-    <div class="row">
-      <% @sneakers.each do |sneaker| %>
-        <div class="col-3">
-          <% if sneaker.photos.attached? %>
+        <div class="col-2" id="sneaker-card-avatar">
+          <img src="https://source.unsplash.com/LxVxPA1LOVM/60x60" alt="Avator Logo" class="avatar-bordered">
+        </div>
+      </div>
+    <%# Sneaker image %>
+      <div class="row mt-3">
+        <div class="col-3" id="sneaker-card-image">
+           <% if sneaker.photos.attached? %>
             <% sneaker.photos.each do |photo| %>
-              <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+              <%= cl_image_tag photo.key, height: 250, width: 200, crop: :fill %>
               <% end %>
           <% end %>
-          <h4><%= sneaker.brand %></h4>
-          <p><%= sneaker.model %></p>
-          <p>$<%= sneaker.price %></p>
-          <p><%= sneaker.size %></p>
-          <p><%= sneaker.condition %></p>
         </div>
+      </div>
+
+    <%# Description %>
+      <div class="container">
+        <%# Model Name %>
         <div class="row">
-          <div class="col-2">
+          <div class="col-3 mt-3">
+            <h2><%= sneaker.model %></h2>
+          </div>
+        </div>
+        <%# Size and Price %>
+        <div class="row my-2 d-flex justify-content-between">
+          <div class="col-1">
+            <h3>Size: <%= sneaker.size %></h3>
+          </div>
+
+          <div class="col-2" id="sneaker-card-price" >
+            <h3>Price: $<%= sneaker.price %></h3>
+          </div>
+        </div>
+        <%# button %>
+        <div class="row">
+          <div class="col-6">
             <button class="s-btn"><%= link_to "View Details", user_sneaker_path(sneaker.user, sneaker) %></button>
           </div>
         </div>
-      <% end %>
+      </div>
     </div>
+    <% end %>
   </div>
 </div>
