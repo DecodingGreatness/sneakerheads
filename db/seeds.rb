@@ -39,6 +39,9 @@ puts 'Creating sneakers...'
 sneaker1 = Sneaker.new(brand: "Nike", model: "Air Wonder", price: 250, size: 11, verified: true)
 
 sneaker1.user = user1
+
+sneaker6 = Sneaker.new(brand: "Nike", price: 300, size: 12, verified: true)
+
 # sneaker1.photos.attach(io: file, filename: 'a0fxd7saxlav374ibgpfrt7ip416.jpg', content_type: 'image/jpg')
 sneaker1.save!
 
