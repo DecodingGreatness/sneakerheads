@@ -23,11 +23,10 @@
     <div class="row">
 
     <% Sneaker::BRANDS.each do |brand| %>
-
       <div class="col-3">
-        <div class="brand-card"  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/xyhMlUbwiQU)">
+        <div class="brand-card my-3"  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/Qtd_xt0CCzY)">
           <% count = 0 %>
-          <h2><%= link_to brand, brand_sneakers_path(brand) %></h2>
+          <h2 class="a"><%= link_to brand, brand_sneakers_path(brand) %></h2>
             <% count+=1 %>
         </div>
       </div>
