@@ -73,7 +73,6 @@ ActiveRecord::Schema.define(version: 2022_06_02_085856) do
     t.bigint "buyer_id", null: false
     t.bigint "seller_id", null: false
     t.string "status"
-    t.date "date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["buyer_id"], name: "index_transactions_on_buyer_id"
