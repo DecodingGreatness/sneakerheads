@@ -1,10 +1,57 @@
+<%# Brand page %>
 <div class="user-bg">
-  <% @brands.each do |brand| %>
-    <h3>Sneaker name:  <%= brand.model %></h3>
-    <h3>Sneaker size:  <%= brand.size %></h3>
-    <h3>Sneaker price: <%= brand.price %></h3>
-    <h3><%# <%= link_to "Show more", user_sneaker_path(@user, @sneaker) %></h3>
+  <h1 class="my-3">Brand: <%= @sneakers.last.brand %></h1>
 
-  <%= link_to "Show details", sneakers_path(@sneaker) %>
+  <div class="container brand-grid">
+  <% @sneakers.each do |sneaker| %>
 
-<% end %>
+    <div class="container sneaker-card">
+      <%# row 1 - Brand Logo & Avator Logo %>
+      <div class="row d-flex justify-content-between">
+        <div class="col-2">
+          <img src="https://source.unsplash.com/sCXmwaVrBio/60x60" alt="Brand Logo">
+        </div>
+
+        <div class="col-2" id="sneaker-card-avator">
+          <img src="https://source.unsplash.com/LxVxPA1LOVM/60x60" alt="Avator Logo">
+        </div>
+      </div>
+    <%# Sneaker image %>
+      <div class="row">
+        <div class="col-3" id="sneaker-card-image">
+          <img src="https://source.unsplash.com/jvoZ-Aux9aw/240x200" alt="Sneaker image">
+        </div>
+      </div>
+
+    <%# Description %>
+      <div class="container">
+        <%# Model Name %>
+        <div class="row">
+          <div class="col-3 mt-3">
+            <h2><%= sneaker.model %></h2>
+          </div>
+        </div>
+        <%# Size and Price %>
+        <div class="row my-2 d-flex justify-content-between">
+          <div class="col-1">
+            <h3>Size: <%= sneaker.size %></h3>
+          </div>
+
+          <div class="col-2" id="sneaker-card-price" >
+            <h3>Price: $<%= sneaker.price %></h3>
+          </div>
+        </div>
+        <%# button %>
+        <div class="row">
+          <div class="col-6">
+            <button class="s-btn"><%= link_to "View Details", user_sneaker_path(sneaker.user, sneaker) %></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <% end %>
+
+  </div>
+
+</div>

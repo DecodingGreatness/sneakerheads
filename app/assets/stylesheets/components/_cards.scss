@@ -42,11 +42,23 @@
   box-shadow: 16px;
 
 }
-#sneaker-image {
+#sneaker-card-image {
   width: 280px;
-  height: 240px;
+  height: 200px;
   object-fit: cover;
 }
+
+#sneaker-card-avator {
+  border-radius: 50%;
+  position: relative;
+  right: 32px;
+}
+
+#sneaker-card-price {
+  position: relative;
+  right: 64px;
+}
+
 .sneaker-card h2 {
   font-size: 16px;
   }
@@ -63,3 +75,29 @@
   display: inline-block;
   white-space: nowrap;
   }
+
+// brand card
+
+.brand-card {
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+    width: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    position: relative;
+    top: 56px;
+}
+
+.brands {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 8px;
+}
