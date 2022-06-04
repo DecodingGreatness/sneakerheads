@@ -21,10 +21,10 @@
     </div>
 
 
-    <div class="row brands">
+    <div class="row brands flex-container mt-5">
       <% Sneaker::BRANDS.each do |brand| %>
-        <div class="col-6">
-          <div class="brand-card my-3"  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/Qtd_xt0CCzY)">
+        <div class="col-3">
+          <div class="brand-card my-3"  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/7LXP4BaXvrY)">
             <% count = 0 %>
             <h2 class="a"><%= link_to brand, brand_sneakers_path(brand) %></h2>
               <% count+=1 %>

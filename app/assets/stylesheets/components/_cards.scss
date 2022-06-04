@@ -82,7 +82,7 @@
     background-size: cover;
     background-position: center;
     height: 150px;
-    width: 230px;
+    width: 240px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,8 +90,10 @@
     font-size: 24px;
     font-weight: bold;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    border-radius: 5px;
+    border-radius: 8px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    position: relative;
+    top: 56px;
 }
 
 .brands {
