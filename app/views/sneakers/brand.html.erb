@@ -1,7 +1,7 @@
 <div class="user-bg">
-  <h1>Brand: <%= @sneakers.last.brand %></h1>
+  <h1 class="my-3">Brand: <%= @sneakers.last.brand %></h1>
 
-  <div class="container d-flex">
+  <div class="container brand-grid">
   <% @sneakers.each do |sneaker| %>
 
     <div class="container sneaker-card">
