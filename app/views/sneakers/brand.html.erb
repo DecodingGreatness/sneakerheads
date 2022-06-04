@@ -1,11 +1,7 @@
 <div class="user-bg">
   <h1>Brand: <%= @sneakers.last.brand %></h1>
   <% @sneakers.each do |sneaker| %>
-    <h3>Sneaker name:  <%= sneaker.model %></h3>
-    <h3>Sneaker size:  <%= sneaker.size %></h3>
-    <h3>Sneaker price: <%= sneaker.price %></h3>
-  <%= link_to "Show details", sneakers_path(@sneaker) %>
-  <% end %>
+
   <%# row 1 - Brand Logo & Avator Logo %>
   <div class="container sneaker-card">
     <div class="row d-flex justify-content-between">
@@ -24,31 +20,22 @@
       </div>
     </div>
 
-
-
-
-
-
-
-
-
-
   <%# Description %>
     <div class="container">
       <%# Model Name %>
       <div class="row">
         <div class="col-3 mt-3">
-          <h2>Model Name</h2>
+          <h2><%= sneaker.model %></h2>
         </div>
       </div>
       <%# Size and Price %>
       <div class="row my-2 d-flex justify-content-between">
         <div class="col-1">
-          <h3>Size: 8</h3>
+          <h3>Size: <%= sneaker.size %></h3>
         </div>
 
         <div class="col-2" id="sneaker-card-price" >
-          <h3>Price: $458</h3>
+          <h3>Price: $<%= sneaker.price %></h3>
         </div>
       </div>
       <%# button %>
@@ -59,4 +46,7 @@
       </div>
     </div>
   </div>
+
+  <% end %>
+
 </div>
