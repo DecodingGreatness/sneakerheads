@@ -40,10 +40,12 @@ sneaker1 = Sneaker.new(brand: "Nike", model: "Air Wonder", price: 250, size: 11,
 
 sneaker1.user = user1
 
-sneaker6 = Sneaker.new(brand: "Nike", price: 300, size: 12, verified: true)
-
 # sneaker1.photos.attach(io: file, filename: 'a0fxd7saxlav374ibgpfrt7ip416.jpg', content_type: 'image/jpg')
 sneaker1.save!
+
+sneaker6 = Sneaker.new(brand: "Nike", model: "Air Force 1", price: 450, size: 12, verified: true)
+sneaker6.user = user1
+sneaker6.save!
 
 sneaker2 = Sneaker.new(brand: "Addidas", model: "CONTINENTAL 80", price: 88, size: 10, verified: false)
 sneaker2.user = user1

@@ -1,13 +1,11 @@
 <div class="user-bg">
-<h1><%= @brands.model %></h1>
-  <% @brands.each do |brand| %>
-    <h3>Sneaker name:  <%= brand.model %></h3>
-    <h3>Sneaker size:  <%= brand.size %></h3>
-    <h3>Sneaker price: <%= brand.price %></h3>
+  <h1>Brand: <%= @sneakers.last.brand %></h1>
+  <% @sneakers.each do |sneaker| %>
+    <h3>Sneaker name:  <%= sneaker.model %></h3>
+    <h3>Sneaker size:  <%= sneaker.size %></h3>
+    <h3>Sneaker price: <%= sneaker.price %></h3>
   <%= link_to "Show details", sneakers_path(@sneaker) %>
-
-<% end %>
-
+  <% end %>
   <%# row 1 - Brand Logo & Avator Logo %>
   <div class="container sneaker-card">
     <div class="row d-flex justify-content-between">
@@ -25,6 +23,16 @@
         <img src="https://source.unsplash.com/jvoZ-Aux9aw/240x200" alt="Sneaker image">
       </div>
     </div>
+
+
+
+
+
+
+
+
+
+
   <%# Description %>
     <div class="container">
       <%# Model Name %>
