@@ -16,7 +16,7 @@ class TransactionsController < ApplicationController
 
   def create
     @transaction = Transaction.new(transaction_params)
-    @transaction.datetime = Datetime.now
+    @transaction.created_at = DateTime.now
     @transaction.save!
 
     @sneaker = @transaction.sneaker
