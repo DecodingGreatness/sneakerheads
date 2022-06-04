@@ -44,11 +44,7 @@
     <%# Sneaker image %>
       <div class="row mt-3">
         <div class="col-3" id="sneaker-card-image">
-           <% if sneaker.photos.attached? %>
-            <% sneaker.photos.each do |photo| %>
-              <%= cl_image_tag photo.key, height: 250, width: 200, crop: :fill %>
-              <% end %>
-          <% end %>
+            <%= image_tag "airjordon.png", alt: "Nike shoe", width: 250, height: 200 %>
         </div>
       </div>
 
@@ -81,3 +77,10 @@
     <% end %>
   </div>
 </div>
+
+
+<%# cloudinary not working will use cl_image_tag once it is working %>
+<%# <% if sneaker.photos.attached? %>
+<%# <% sneaker.photos.each do |photo| %> %>
+  <%# <%= cl_image_tag photo.key, height: 250, width: 200, crop: :fill %> %>
+  <%# <% end %>
