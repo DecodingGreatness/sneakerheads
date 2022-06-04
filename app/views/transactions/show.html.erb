@@ -3,18 +3,20 @@
 <div class="transaction-bg">
   <div class="container transaction-card">
     <div class="row">
+      <h2>Successful Transaction. Congrats!</h2>
+    </div>
+    <div class="row">
       <%# photo of transacted shoe %>
-        <div class="col-6">
-          <%= image_tag "airjordon.png", alt: "Nike shoe", width: 400, height: 400 %>
-        </div>
-
+      <div class="col-6">
+        <%= image_tag "airjordon.png", alt: "Nike shoe", width: 500, height: 450 %>
+      </div>
       <%# transaction details %>
       <div class="col-6">
         <div class="container">
           <%# Transaction id %>
           <div class="row">
             <div class="col-6">
-              <h2>Transaction No: <%= @transaction.id %></h2>
+              <h2>Transaction No #: <%= @transaction.id %></h2>
             </div>
           </div>
           <%# Model %>
@@ -53,17 +55,6 @@
               <h3><%= @sneaker.size %></h3>
             </div>
           </div>
-          <%# Description %>
-          <div class="row d-flex flex-start">
-            <div class="col-3">
-              <h3>Description:</h3>
-            </div>
-            <div class="col-6">
-              <span><h5>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </h5></span>
-            </div>
-          </div>
           <%# Date %>
           <div class="row d-flex flex-start">
             <div class="col-3">
@@ -79,4 +70,15 @@
         </div>
       </div>
     </div>
+      <%# description %>
+      <div class="row d-flex flex-start mt-3">
+        <div class="col-2">
+          <h3>Description:</h3>
+        </div>
+        <div class="col-9">
+          <span><h5>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </h5></span>
+        </div>
+      </div>
   </div>
