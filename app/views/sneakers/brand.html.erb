@@ -9,17 +9,17 @@
       <%# row 1 - Brand Logo & Avator Logo %>
       <div class="row d-flex justify-content-between">
         <div class="col-2">
-          <img src="https://source.unsplash.com/sCXmwaVrBio/60x60" alt="Brand Logo">
+          <%= image_tag "brand_logos/nike.png", alt: "Nike Logo", width: 40 %>
         </div>
 
-        <div class="col-2" id="sneaker-card-avator">
-          <img src="https://source.unsplash.com/LxVxPA1LOVM/60x60" alt="Avator Logo">
+        <div class="col-2" id="sneaker-card-avatar">
+          <img src="https://source.unsplash.com/LxVxPA1LOVM/60x60" alt="Avator Logo" class="avatar-bordered">
         </div>
       </div>
     <%# Sneaker image %>
-      <div class="row">
+      <div class="row mt-3">
         <div class="col-3" id="sneaker-card-image">
-          <img src="https://source.unsplash.com/jvoZ-Aux9aw/240x200" alt="Sneaker image">
+          <%= image_tag "airjordon.png", alt: "Nike shoe", width: 250, height: 200 %>
         </div>
       </div>
 
