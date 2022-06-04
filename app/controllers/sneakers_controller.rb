@@ -20,7 +20,7 @@ class SneakersController < ApplicationController
   end
 
   def brand
-    @brands = Sneaker.where(brand: params[:brand_name])
+    @sneakers = Sneaker.where(brand: params[:brand_name])
     # @user = @brand.user_id
     # @sneaker = @brand
     # raise
