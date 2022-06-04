@@ -6,6 +6,7 @@ class CreateTransactions < ActiveRecord::Migration[6.1]
       t.references :buyer, null: false, foreign_key: { to_table: :users }
       t.references :seller, null: false, foreign_key: { to_table: :users }
       t.string :status
+      t.datetime :datetime
 
       t.timestamps
     end
