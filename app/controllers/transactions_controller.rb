@@ -7,7 +7,7 @@ class TransactionsController < ApplicationController
     @buyer = @transaction.buyer
     @seller = @transaction.seller
     @sneaker.user = @transaction.buyer
-  end
+    end
 
   def new
     @transaction = Transaction.new
@@ -16,6 +16,7 @@ class TransactionsController < ApplicationController
 
   def create
     @transaction = Transaction.new(transaction_params)
+    @transaction.date = DateTime.now
     @transaction.save!
 
     @sneaker = @transaction.sneaker
