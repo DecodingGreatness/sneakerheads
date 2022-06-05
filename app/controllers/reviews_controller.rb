@@ -6,14 +6,18 @@ class ReviewsController < ApplicationController
 
   def create
     @review = Review.new(review_params)
-    @user = User.find[:user_id]
-    @review.user = @user
-    @review.save
+    @transaction = Transaction.find(params[:transaction_id])
+    @review.transaction_id = @transaction
+    if @review.save
+      redirect_to transaction_reviews(@transaction)
+    else
+      render :new
+    end
   end
 
   private
 
   def review_params
-    params.require(:review).permit(:content)
+    params.require(:review).permit(:buyer_content, :seller_content, :buyer_rating, :seller_rating)
   end
 end

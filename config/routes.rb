@@ -17,8 +17,6 @@ Rails.application.routes.draw do
     end
   end
 
-
-
   resources :sneakers do
     resources :transactions
   end

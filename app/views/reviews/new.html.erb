@@ -1,7 +1,14 @@
-<%= simple_form_for [@transaction, @review] do |f|%>
-  <%= f.input :buyer_content %>
-  <%= f.input :seller_content %>
-  <%= f.input :buyer_rating %>
-  <%= f.input :seller_rating %>
-  <%= f.submit "Submit Review", class: "btn btn-primary" %>
+<%# condition: if current user has buyer_id review seller else review buyer %>
+<% if current_user.id == @transaction.buyer_id %>
+  <%= simple_form_for [@transaction, @review] do |f|%>
+    <%= f.input :seller_rating %>
+    <%= f.input :seller_content %>
+    <%= f.submit "Submit Review", class: "btn btn-primary" %>
+  <% end %>
+<% else %>
+    <%= simple_form_for [@transaction, @review] do |f|%>
+    <%= f.input :buyer_rating %>
+    <%= f.input :buyer_content %>
+    <%= f.submit "Submit Review", class: "btn btn-primary" %>
+  <% end %>
 <% end %>
