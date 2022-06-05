@@ -5,7 +5,7 @@
       <div class="username d-flex justify-content-end py-4 mb-5">
         <% if user_signed_in? %>
           <p class="light">
-          <h2>WELCOME <%= current_user.username.upcase %>!</h2>
+          <h2>WELCOME <%= current_user.username %>!</h2>
           </p>
         <% end %>
       </div>
@@ -14,9 +14,9 @@
     <div class="arrivals d-flex align-items-center">
       <div class="row">
         <div class="col-9">
-          <h1>SneakerHeads</h1>
+          <h1 class="neon">SNEAKERHEADS</h1>
           <h2 class="mt-3">The Place Where SneakerHeads Gather</h2>
-          <button class="b mt-5"><%= link_to "LASTEST ARRIVALS", sneakers_path %></button>
+          <button class="glow-on-hover" type="button"><%= link_to "LASTEST ARRIVALS", sneakers_path %></button>
         </div>
       </div>
     </div>
