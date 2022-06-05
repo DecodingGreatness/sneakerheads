@@ -31,7 +31,7 @@
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "My Profile", user_path(current_user), class: "dropdown-item" %>
               <%= link_to "My Collection", user_path(current_user), class: "dropdown-item" %>
-              <%= link_to "My Transactions", user_path(current_user), class: "dropdown-item" %>
+              <%= link_to "My Transactions", user_transactions_path(current_user), class: "dropdown-item" %>
               <%= link_to "Settings", "#", class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>

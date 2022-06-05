@@ -53,7 +53,7 @@
           <%# button %>
           <div class="row">
             <div class="col-6">
-              <button class="s-btn">Add Review</button>
+              <button class="s-btn"><%= link_to "Add Review", new_transaction_review_path(transaction) %></button>
             </div>
           </div>
         </div>
@@ -61,4 +61,5 @@
       <% end %>
     </div>
   </div>
+
 </div>
