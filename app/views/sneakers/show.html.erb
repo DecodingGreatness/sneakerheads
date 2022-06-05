@@ -27,6 +27,7 @@
       <p>Size <%= @sneaker.size %></p>
       <p>Owner: <%= @sneaker.user.first_name %></p>
       <%= link_to "Back To #{@sneaker.brand}", brand_sneakers_path(@sneaker.brand), class: "btn btn-gradient" %>
+      <%= link_to "Home", root_path, class: "btn btn-gradient" %>
       <% if @sneaker.user != current_user %>
         <%= link_to "Buy Now", new_sneaker_transaction_path(@sneaker), class: "btn btn-gradient" %>
         <% end %>
