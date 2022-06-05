@@ -1,4 +1,7 @@
 class TransactionsController < ApplicationController
+  def index
+    @transactions = Transaction.all
+  end
 
   def show
     @sneaker = Sneaker.find(params[:sneaker_id])
