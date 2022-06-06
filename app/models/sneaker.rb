@@ -1,6 +1,5 @@
 class Sneaker < ApplicationRecord
   belongs_to :user
-  has_many_attached :photos
-
-  BRANDS = %w[Nike Addidas Puma NewBalance Reebok]
+  has_one_attached :photo
+  BRANDS = %w[Nike Adidas Puma NewBalance Reebok]
 end

@@ -1,43 +1,80 @@
 <%# Purchase page %>
-
-<div class="container">
-  <div class="row">
-    <div class="col-3">
-      <img src="#" alt="carousel gallery">
+<div class="transaction-bg">
+  <div class="container transaction-card">
+    <div class="row p-2 d-flex justify-content-center">
+      <h2>Purchase Details</h2>
+      <%# photo of transacted shoe %>
+      <div class="col-8">
+        <%= image_tag "airjordon.png", alt: "Nike shoe", width: 550, height: 350 %>
+      </div>
     </div>
+    <div class="row">
+
+      <%# transaction details %>
+      <div class="col-12">
+        <div class="container">
+          <%# Transaction id %>
+          <div class="row">
+            <div class="col-12">
+              <h2>Brand: <%= @sneaker.brand %></h2>
+            </div>
+          </div>
+          <%# Model %>
+           <div class="row d-flex flex-start mt-5">
+            <div class="col-3">
+              <h3>Model:</h3>
+            </div>
+            <div class="col-8">
+              <h3><%= @sneaker.model %></h3>
+            </div>
+          </div>
+          <%# Sneaker id %>
+          <div class="row d-flex flex-start mt-2">
+            <div class="col-5">
+              <h3>Sneaker ID:</h3>
+            </div>
+            <div class="col-5">
+              <h3><%= @sneaker.id %></h3>
+            </div>
+          </div>
+          <%# Price %>
+          <div class="row d-flex flex-start mt-2">
+            <div class="col-3">
+              <h3>Price:</h3>
+            </div>
+            <div class="col-5">
+              <h3><%= @sneaker.price %></h3>
+            </div>
+          </div>
+          <%# Size %>
+          <div class="row d-flex flex-start mt-2">
+            <div class="col-3">
+              <h3>Size:</h3>
+            </div>
+            <div class="col-5">
+              <h3><%= @sneaker.size %></h3>
+            </div>
+          </div>
+          <%# Date %>
+          <div class="row d-flex flex-start mt-2">
+            <div class="col-3">
+              <h3>Date:</h3>
+            </div>
+            <div class="col-9">
+              <h4>26 June 2022, 0900am </h4>
+            </div>
+          </div>
+          <div class="row">
+            <%= simple_form_for [ @sneaker, @transaction ] do |f| %>
+              <%= f.input :sneaker_id, :as => :hidden, :input_html => { :value => @sneaker.id }  %>
+              <%= f.input :seller_id, :as => :hidden, :input_html => { :value => @sneaker.user.id }  %>
+              <%= f.input :buyer_id, :as => :hidden, :input_html => { :value => current_user.id }  %>
+              <%= f.submit "Confirm Purchase", class: "b" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
   </div>
-  <div>
-    <div class="row">
-      <div class="col-3">
-        <h2>Nike</h2>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-3">
-        <p>Description:</p>
-      </div>
-      <div class="col-6">
-        <p><%= @sneaker.brand %> <%= @sneaker.model %>, Size: <%= @sneaker.size %></p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-3">
-        <p>Price: <%= @sneaker.price %></p>
-      </div>
-      <div class="col-6">
-        <p>$100</p>
-      </div>
-    </div>
-
-    <div class="row">
-      <%= simple_form_for [ @sneaker, @transaction ] do |f| %>
-        <%= f.input :sneaker_id, :as => :hidden, :input_html => { :value => @sneaker.id }  %>
-        <%= f.input :seller_id, :as => :hidden, :input_html => { :value => @sneaker.user.id }  %>
-        <%= f.input :buyer_id, :as => :hidden, :input_html => { :value => current_user.id }  %>
-        <%= f.submit "Confirm Purchase", class: "btn btn-primary" %>
-      <% end %>
-    </div>
-  </div>
-</div>

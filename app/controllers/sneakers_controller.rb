@@ -21,6 +21,11 @@ class SneakersController < ApplicationController
 
   def brand
     @sneakers = Sneaker.where(brand: params[:brand_name])
+    # @user = @brand.user_id
+    # @sneaker = @brand
+    # raise
+    # @sneaker = Sneaker.find(params[:id])
+    # @user = User.find(params[:user_id])
   end
 
   def create
@@ -37,6 +42,6 @@ class SneakersController < ApplicationController
   private
 
   def sneaker_params
-    params.require(:sneaker).permit(:brand, :model, :price, :size, :condition, :user_id, photos: [])
+    params.require(:sneaker).permit(:brand, :model, :price, :size, :condition, :user_id, :photo)
   end
 end

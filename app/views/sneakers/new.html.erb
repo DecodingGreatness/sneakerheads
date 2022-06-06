@@ -1,15 +1,18 @@
-<div class="d-flex align-items-center justify-content-center">
-  <div class= "row" justify-content-center>
-    <div class="mb-3">
-    <%= simple_form_for [ @user, @sneaker ] do |f| %>
-        <%= f.input :brand %>
-        <%= f.input :model %>
-        <%= f.input :price %>
-        <%= f.input :size %>
-        <%= f.input :condition %>
-        <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-        <%= f.submit "Add Sneaker", class: "btn btn-primary"%>
-      <% end %>
+<div id="simpleform">
+  <div class= "d-flex align-items-center justify-content-center">
+    <div class= "row" justify-content-center form >
+      <div class="mb-3">
+      <%= simple_form_for [ @user, @sneaker ] do |f| %>
+          <%= f.input :brand %>
+          <%= f.input :model %>
+          <%= f.input :price %>
+          <%= f.input :size %>
+          <%= f.input :condition, collection: ['New', 'Used'] %>
+          <%= f.input :description %>
+          <%= f.input :photo, as: :file %>
+          <%= f.submit "Add Sneaker", class: "b"%>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

@@ -1,0 +1,65 @@
+<div class="user-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 my-5">
+        <div class="d-flex justify-content-between">
+            <h1>My Transactions</h1>
+          <button class="b"><%= link_to 'My Reviews', "#" %></button>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="container brand-grid">
+    <% @transactions.each do |transaction| %>
+
+      <div class="container sneaker-card">
+        <%# row 1 - Brand Logo & Avator Logo %>
+        <div class="row d-flex justify-content-between">
+          <div class="col-2">
+            <%= image_tag "brand_logos/nike.png", alt: "Nike Logo", width: 40 %>
+          </div>
+
+          <div class="col-2" id="sneaker-card-avatar">
+            <img src="https://source.unsplash.com/LxVxPA1LOVM/60x60" alt="Avator Logo" class="avatar-bordered">
+          </div>
+        </div>
+      <%# Sneaker image %>
+        <div class="row mt-3">
+          <div class="col-3" id="sneaker-card-image">
+            <%= image_tag "airjordon.png", alt: "Nike shoe", width: 250, height: 200 %>
+          </div>
+        </div>
+
+      <%# Description %>
+        <div class="container">
+          <%# Transaction ID %>
+          <div class="row">
+            <div class="col-3 mt-3">
+              <h2>Transaction #:<%= transaction.id %></h2>
+            </div>
+          </div>
+          <%# Size and Price %>
+          <div class="row my-2 d-flex justify-content-between">
+            <div class="col-1">
+              <h3>Buyer ID: <%= transaction.buyer_id %></h3>
+            </div>
+
+            <div class="col-2" id="sneaker-card-price" >
+              <h3>Seller ID: $<%= transaction.seller_id %></h3>
+            </div>
+          </div>
+          <%# button %>
+          <div class="row">
+            <div class="col-6">
+              <button class="s-btn"><%= link_to "Add Review", new_transaction_review_path(transaction) %></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+
+</div>
