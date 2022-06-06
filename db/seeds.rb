@@ -15,8 +15,8 @@ puts 'Creating users...'
 
 
 user1 = User.new(username: "batman",
-                password: "password123",
-                email: "batman@123.com",
+                password: "123456",
+                email: "john@123.com",
                 first_name: "John",
                 last_name: "Doe",
                 address: "888 This Street")
@@ -24,8 +24,8 @@ user1.save!
 
 
 user2 = User.new(username: "wonderer",
-                password: "password123",
-                email: "wonderer@234.com",
+                password: "123456",
+                email: "jane@123.com",
                 first_name: "Jane",
                 last_name: "Smith",
                 address: "111 That Street")
