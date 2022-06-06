@@ -9,44 +9,41 @@
 @import "grid";
 
 // Import font family
-@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap");
 // font-family: 'Kdam Thmor Pro', sans-serif;
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;700&display=swap");
 // font-family: 'Roboto Mono', monospace;
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Permanent+Marker&family=Shadows+Into+Light&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@600&family=Permanent+Marker&family=Shadows+Into+Light&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Permanent+Marker&family=Shadows+Into+Light&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@600&family=Permanent+Marker&family=Shadows+Into+Light&display=swap");
 // Utilites
 
-body, html {
+body,
+html {
   height: 100%;
 }
 
 h1 {
   text-align: justify;
   color: white;
-  font-family: 'Permanent Marker', cursive;
+  font-family: "Permanent Marker", cursive;
   font-size: 70px;
   box-shadow: 8px;
-
 }
-
-
 
 h2 {
   color: white;
-  font-family: 'Permanent Marker', cursive;
+  font-family: "Permanent Marker", cursive;
   font-size: 35px;
 }
 
 h3 {
-  color: black;
-  font-family: 'Caveat', cursive;
+  color: white;
+  font-family: "Caveat", cursive;
   font-size: 100px;
 }
 
 // Others
-
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
@@ -110,9 +107,14 @@ a:active {
   background: #ffffff;
 }
 
-
 @keyframes glowing {
-  0% { background-position: 0 0; }
-  50% { background-position: 400% 0; }
-  100% { background-position: 0 0; }
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
