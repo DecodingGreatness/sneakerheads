@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon sticky-top navbar-light">
   <div class="container-fluid">
     <%= link_to "#", class: "navbar-brand" do %>
           <form class="d-flex">
@@ -16,15 +16,18 @@
           <li class="nav-item active">
             <%= link_to "HOME", root_path, class: "nav-link text-primary" %>
           </li>
-             <li class="nav-item">
-            <%= link_to "TRENDING", "#", class: "nav-link " %>
+             <li class="nav-item"
+    
           </li>
           <li class="nav-item">
             <%= link_to "STORE", sneakers_path, class: "nav-link " %
           </li>
           <li class="nav-item">
             <%= link_to "SIGN UP", new_user_session_path, class: "nav-link " %>
+
+            <%= link_to "TRENDING", sneakers_path, class: "nav-link" %>
           </li>
+
         <% if user_signed_in? %>
           <li class="nav-item dropdown">
             <%= image_tag "https://source.unsplash.com/random/40x40", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
