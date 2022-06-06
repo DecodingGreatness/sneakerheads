@@ -1,38 +1,31 @@
 <%# Sneaker Details page %>
 <div class="container">
   <div class="row">
+
     <div class="col-6">
       <div class="sneaker-images">
         <% if @sneaker.photo.attached? %>
-          <%= cl_image_tag @sneaker.photo.key, height: 300, width: 400, crop: :fill %>
+          <%= cl_image_tag @sneaker.photo.key, height: 300, width: 400, crop: :fill%>
         <% end %>
-          <div class="row">
-            <div class="col-3">
-              <div class="card-product mt-5">
-              <div class="card-sneaker" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/XPBYi4K8vFI)">
-            </div>
-          </div>
-        </div>
       </div>
     </div>
-  </div>
 
-<%# user_path(current_user) %>
     <div class="col-6">
       <h1><%= @sneaker.brand %></h1>
       <h2>$<%= @sneaker.price %></h2>
       <p><%= @sneaker.model %></p>
-      <%# <p><%= @sneaker.description %></p> %>
+      <p><%#= @sneaker.description %></p>
       <p>Size <%= @sneaker.size %></p>
       <p>Owner: <%= @sneaker.user.first_name %></p>
 
       <%= link_to "Back", brand_sneakers_path(@sneaker.brand), class:"glow-on-hover"%>
       <%= link_to "Home", root_path, class:"glow-on-hover" %>
-      <% if @sneaker.user != current_user %>
 
+      <% if @sneaker.user != current_user %>
         <%= link_to "Buy Now", new_sneaker_transaction_path(@sneaker), class:"glow-on-hover" %>
-        <% end %>
+      <% end %>
+
     </div>
-  </div>
+
   </div>
 </div>
