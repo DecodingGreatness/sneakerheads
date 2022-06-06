@@ -6,6 +6,7 @@ class TransactionsController < ApplicationController
   def show
     @sneaker = Sneaker.find(params[:sneaker_id])
     @transaction = Transaction.find(params[:id])
+    @review = Review.new
 
     @buyer = @transaction.buyer
     @seller = @transaction.seller
