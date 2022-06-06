@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 2022_06_02_085856) do
     t.integer "price"
     t.integer "size"
     t.string "condition"
+    t.text "description"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
