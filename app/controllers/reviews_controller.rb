@@ -5,14 +5,14 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    @review = Review.new(review_params)
-    @transaction = Transaction.find(params[:transaction_id])
-    @review.transaction_id = @transaction
-    if @review.save
-      redirect_to transaction_reviews(@transaction)
-    else
-      render :new
-    end
+    # @review = Review.new(review_params)
+    # @transaction = Transaction.find(params[:transaction_id])
+    # @review.transaction_id = @transaction
+    # if @review.save
+    #   redirect_to transaction_reviews(@transaction)
+    # else
+    #   render :new
+    # end
   end
 
   private
