@@ -12,8 +12,6 @@ User.destroy_all
 puts 'Database Clean!'
 
 puts 'Creating users...'
-
-
 user1 = User.new(username: "batman",
                 password: "password123",
                 email: "batman@123.com",
@@ -22,7 +20,6 @@ user1 = User.new(username: "batman",
                 address: "888 This Street")
 user1.save!
 
-
 user2 = User.new(username: "wonderer",
                 password: "password123",
                 email: "wonderer@234.com",
@@ -30,7 +27,7 @@ user2 = User.new(username: "wonderer",
                 last_name: "Smith",
                 address: "111 That Street")
 user2.save!
-users = User.all
+# users = User.all
 
 puts 'Creating sneakers...'
 

@@ -8,6 +8,7 @@
           <%= f.input :price %>
           <%= f.input :size %>
           <%= f.input :condition, collection: ['New', 'Used'] %>
+          <%= f.input :description %>
           <%= f.input :photo, as: :file %>
           <%= f.submit "Add Sneaker", class: "b"%>
         <% end %>
