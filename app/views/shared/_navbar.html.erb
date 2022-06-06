@@ -17,14 +17,9 @@
             <%= link_to "HOME", root_path, class: "nav-link" %>
           </li>
              <li class="nav-item">
-            <%= link_to "TRENDING", "#", class: "nav-link" %>
+            <%= link_to "TRENDING", sneakers_path, class: "nav-link" %>
           </li>
-          <li class="nav-item">
-            <%= link_to "STORE", sneakers_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "SIGN UP", new_user_registration_path, class: "nav-link" %>
-          </li>
+
         <% if user_signed_in? %>
           <li class="nav-item dropdown">
             <%= image_tag "https://source.unsplash.com/N6Rfv9z1HH0/40x40", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
