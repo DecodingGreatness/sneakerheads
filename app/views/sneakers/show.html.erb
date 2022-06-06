@@ -3,11 +3,9 @@
   <div class="row">
     <div class="col-6">
       <div class="sneaker-images">
-        <% if @sneaker.photos.attached? %>
-        <% @sneaker.photos.each do |photo| %>
-          <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-          <% end %>
-      <% end %>
+        <% if @sneaker.photo.attached? %>
+          <%= cl_image_tag @sneaker.photo.key, height: 300, width: 400, crop: :fill %>
+        <% end %>
           <div class="row">
             <div class="col-3">
               <div class="card-product mt-5">
@@ -26,7 +24,7 @@
       <p><%= @sneaker.description %></p>
       <p>Size <%= @sneaker.size %></p>
       <p>Owner: <%= @sneaker.user.first_name %></p>
-      <%= link_to "Back To #{@sneaker.brand}", brand_sneakers_path(@sneaker.brand), class:"glow-on-hover"%>
+      <%= link_to "Back", brand_sneakers_path(@sneaker.brand), class:"glow-on-hover"%>
       <%= link_to "Home", root_path, class:"glow-on-hover" %>
       <% if @sneaker.user != current_user %>
         <%= link_to "Buy Now", new_sneaker_transaction_path(@sneaker), class:"glow-on-hover" %>
