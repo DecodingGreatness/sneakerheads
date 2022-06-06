@@ -5,6 +5,7 @@
     <%= f.input :seller_content %>
     <%= f.submit "Submit Review", class: "btn btn-primary" %>
   <% end %>
+
 <% else %>
     <%= simple_form_for [@transaction, @review] do |f|%>
     <%= f.input :buyer_rating %>
