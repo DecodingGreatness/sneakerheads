@@ -1,7 +1,6 @@
 <%# Sneaker Details page %>
 <div class="container">
   <div class="row">
-
     <div class="col-6">
       <div class="sneaker-images">
         <% if @sneaker.photo.attached? %>
@@ -9,7 +8,6 @@
         <% end %>
       </div>
     </div>
-
     <div class="col-6">
       <h1><%= @sneaker.brand %></h1>
       <h2>$<%= @sneaker.price %></h2>
@@ -17,13 +15,10 @@
       <p><%#= @sneaker.description %></p>
       <p>Size <%= @sneaker.size %></p>
       <p>Owner: <%= @sneaker.user.first_name %></p>
-
       <%= link_to "My Collection", user_path(current_user), class:"glow-on-hover" %>
-
       <% if @sneaker.user != current_user %>
         <%= link_to "Buy Now", new_sneaker_transaction_path(@sneaker), class:"glow-on-hover" %>
       <% end %>
     </div>
-
   </div>
 </div>
