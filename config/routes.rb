@@ -4,6 +4,11 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :users do
     resources :sneakers, only: [ :new, :create, :show ]
+    resources :transactions
+  end
+
+  resources :transactions do
+    resources :reviews, only: [:new, :create]
   end
 
   resources :sneakers do
@@ -15,6 +20,5 @@ Rails.application.routes.draw do
   resources :sneakers do
     resources :transactions
   end
-
 
 end
