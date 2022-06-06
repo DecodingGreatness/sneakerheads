@@ -3,7 +3,7 @@
     <%= link_to "#", class: "navbar-brand" do %>
           <form class="d-flex">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success">Search</button>
+            <button class="btn btn-outline-light">Search</button>
           </form>
     <% end %>
 
@@ -14,18 +14,11 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
           <li class="nav-item active">
-            <%= link_to "HOME", root_path, class: "nav-link text-primary" %>
+            <%= link_to "HOME", root_path, class: "nav-link text-white" %>
           </li>
-             <li class="nav-item"
-    
-          </li>
-          <li class="nav-item">
-            <%= link_to "STORE", sneakers_path, class: "nav-link " %
-          </li>
-          <li class="nav-item">
-            <%= link_to "SIGN UP", new_user_session_path, class: "nav-link " %>
+             <li class="nav-item">
+            <%= link_to "TRENDING", sneakers_path, class: "nav-link text-white" %>
 
-            <%= link_to "TRENDING", sneakers_path, class: "nav-link" %>
           </li>
 
         <% if user_signed_in? %>
