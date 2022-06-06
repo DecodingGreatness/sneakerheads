@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon sticky-top navbar-light">
   <div class="container-fluid">
     <%= link_to "#", class: "navbar-brand" do %>
           <form class="d-flex">
@@ -18,17 +18,20 @@
           </li>
              <li class="nav-item">
             <%= link_to "TRENDING", sneakers_path, class: "nav-link text-white" %>
+
           </li>
 
         <% if user_signed_in? %>
           <li class="nav-item dropdown">
-            <%= image_tag "https://source.unsplash.com/N6Rfv9z1HH0/40x40", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <%= image_tag "https://source.unsplash.com/random/40x40", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+
               <%= link_to "My Profile", user_path(current_user), class: "dropdown-item text-black" %>
               <%= link_to "My Collection", user_path(current_user), class: "dropdown-item text-black" %>
               <%= link_to "My Transactions", user_transactions_path(current_user), class: "dropdown-item text-black" %>
               <%= link_to "Settings", "#", class: "dropdown-item text-black" %>
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item text-black"  %>
+
             </div>
           </li>
         <% else %>

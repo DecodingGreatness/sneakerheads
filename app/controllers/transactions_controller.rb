@@ -16,11 +16,12 @@ class TransactionsController < ApplicationController
   def new
     @transaction = Transaction.new
     @sneaker = Sneaker.find(params[:sneaker_id])
+    @transaction.created_at = DateTime.now.in_time_zone("Asia/Singapore").strftime("%d/%m/%Y %H:%M")
   end
 
   def create
     @transaction = Transaction.new(transaction_params)
-    @transaction.created_at = DateTime.now
+    @transaction.created_at = DateTime.now.in_time_zone("Asia/Singapore").strftime("%d/%m/%Y %H:%M")
     @transaction.save!
 
     @sneaker = @transaction.sneaker
