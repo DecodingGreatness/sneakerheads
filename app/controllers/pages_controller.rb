@@ -3,6 +3,5 @@ class PagesController < ApplicationController
 
   def home
     @sneakers = Sneaker.all
-    @transactions = Transaction.all
   end
 end
