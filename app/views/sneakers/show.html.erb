@@ -5,6 +5,8 @@
       <div class="sneaker-images">
         <% if @sneaker.photo.attached? %>
           <%= cl_image_tag @sneaker.photo.key, height: 300, width: 400, crop: :fill%>
+        <% else %>
+
         <% end %>
       </div>
     </div>
