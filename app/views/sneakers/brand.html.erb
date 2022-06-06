@@ -1,5 +1,12 @@
 <%# Brand page %>
 <div class="user-bg">
+  <div class="row">
+      <div class="col-12 mt-3">
+        <div class="d-flex justify-content-between">
+          <button class="b"><%= link_to 'Home', root_path %></button>
+        </div>
+      </div>
+    </div>
   <h1 class="my-3">Brand: <%= @sneakers.last.brand %></h1>
 
   <div class="container brand-grid">

@@ -1,3 +1,8 @@
+body{
+  background-color: #A05C7B;
+}
+
+
 .sneaker-images > img{
   width: 100%;
 }
@@ -12,7 +17,7 @@
   cursor: pointer;
   position: relative;
   z-index: 0;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .glow-on-hover:before {
