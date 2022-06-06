@@ -6,28 +6,12 @@
         <h1><%= @user.first_name.capitalize %></h1>
       </div>
     </div>
-    <div class="row">
-      <div class="col-12 mt-3">
-        <div class="d-flex justify-content-between">
-          <button class="b"><%= link_to 'Home', root_path %></button>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-12 mt-3">
-        <div class="d-flex justify-content-between">
-          <h2>Rating</h2>
-          <button class="b"><%= link_to 'Reviews', "#" %></button>
-        </div>
-      </div>
-    </div>
 
     <div class="row">
       <div class="col-12 mt-5">
         <div class="d-flex justify-content-between">
           <h2>My Collections</h2>
-           <button class="b"><%= link_to 'Add Sneaker', new_user_sneaker_path(@user, @sneaker) %></button>
+           <button class="glow-round"><%= link_to 'Add Sneaker', new_user_sneaker_path(@user, @sneaker) %></button>
         </div>
       </div>
     </div>
@@ -85,10 +69,3 @@
         <% end %>
       </div>
 </div>
-
-
-<%# cloudinary not working will use cl_image_tag once it is working %>
-<%# <% if sneaker.photos.attached? %>
-<%# <% sneaker.photos.each do |photo| %>
-  <%# <%= cl_image_tag photo.key, height: 250, width: 200, crop: :fill %>
-  <%# <% end %>
